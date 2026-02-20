@@ -134,17 +134,17 @@ module "compute" {
 # ======================
 # ALB Module
 # ======================
-module "alb" {
-  source = "./modules/alb"
+# module "alb" {
+#   source = "./modules/alb"
 
-  name               = var.name
-  ext_alb_sg_id      = module.security.ext_alb_sg_id
-  int_alb_sg_id      = module.security.int_alb_sg_id
-  public_subnet_ids  = module.network.public_subnet_ids
-  private_subnet_ids = module.network.private_subnet_ids
-  vpc_id             = module.network.vpc_id
-  tags               = var.tags
-}
+#   name               = var.name
+#   ext_alb_sg_id      = module.security.ext_alb_sg_id
+#   int_alb_sg_id      = module.security.int_alb_sg_id
+#   public_subnet_ids  = module.network.public_subnet_ids
+#   private_subnet_ids = module.network.private_subnet_ids
+#   vpc_id             = module.network.vpc_id
+#   tags               = var.tags
+# }
 
 # ======================
 # Autoscaling Module
