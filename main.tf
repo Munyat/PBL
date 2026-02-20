@@ -160,9 +160,9 @@ module "autoscaling" {
   nginx_launch_template_id     = module.compute.nginx_launch_template_id
   wordpress_launch_template_id = module.compute.wordpress_launch_template_id
   tooling_launch_template_id   = module.compute.tooling_launch_template_id
-  nginx_target_group_arns      = [module.alb.nginx_target_group_arn]
-  wordpress_target_group_arns  = [module.alb.wordpress_target_group_arn]
-  tooling_target_group_arns    = [module.alb.tooling_target_group_arn]
+  # nginx_target_group_arns      = [module.alb.nginx_target_group_arn]
+  # wordpress_target_group_arns  = [module.alb.wordpress_target_group_arn]
+  # tooling_target_group_arns    = [module.alb.tooling_target_group_arn]
   create_wordpress_asg         = var.create_wordpress_asg
   create_tooling_asg           = var.create_tooling_asg
   tags                         = var.tags
